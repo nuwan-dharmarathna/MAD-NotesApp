@@ -7,17 +7,17 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.mynotes.databinding.ActivityAddNoteBinding
-import com.example.mynotes.databinding.ActivityUpdateBinding
+import com.example.mynotes.databinding.ActivityUpdateNoteBinding
 
 class UpdateNoteActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityUpdateBinding
+    private lateinit var binding: ActivityUpdateNoteBinding
     private lateinit var db: NotesDatabaseHandler
     private var noteId : Int = -1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityUpdateBinding.inflate(layoutInflater)
+        binding = ActivityUpdateNoteBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         db = NotesDatabaseHandler(this)
